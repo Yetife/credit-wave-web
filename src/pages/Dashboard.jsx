@@ -16,15 +16,15 @@ import Paper from '@mui/material/Paper';
 import MenuIcon from '@mui/icons-material/Menu';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import NotificationsIcon from '@mui/icons-material/Notifications';
-import { mainListItems } from './listItems';
-import themes from './themes.jsx';
+import { mainListItems } from '../components/listItems.jsx';
+import themes from '../components/themes.jsx';
 import logo from '../assets/logo.svg';
 import {Avatar, Button, Stack, Text} from "@chakra-ui/react";
 import pana from '../assets/pana.svg';
 import user from '../assets/avatar.svg';
 import {DemoItem} from "@mui/x-date-pickers/internals/demo/index.js";
 import {DateCalendar} from "@mui/x-date-pickers";
-import help from  "../assets/help.svg"
+import help from "../assets/help.svg"
 import {Link as ReactLink} from "react-router-dom";
 import {Menu, MenuItem, Tooltip} from "@mui/material";
 import {ExpandLess} from "@mui/icons-material";

@@ -1,8 +1,8 @@
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import Login from "./components/Login.jsx";
+import Login from "./pages/Login.jsx";
 import {ChakraProvider} from "@chakra-ui/react";
-import SignUp from "./components/SignUp.jsx";
-import Dashboard from "./components/Dashboard.jsx";
+import SignUp from "./pages/SignUp.jsx";
+import Dashboard from "./pages/Dashboard.jsx";
 
 const router = createBrowserRouter([
      {path: '/', element: <Login />},
