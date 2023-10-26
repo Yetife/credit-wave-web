@@ -28,6 +28,8 @@ import help from  "../assets/help.svg"
 import {Link as ReactLink} from "react-router-dom";
 import {Menu, MenuItem, Tooltip} from "@mui/material";
 import {ExpandLess} from "@mui/icons-material";
+import recovery from '../assets/recovery.png';
+import cloud from '../assets/cloud.svg';
 
 
 const drawerWidth = 280;
@@ -92,7 +94,7 @@ const themeStyle = createTheme({
 // TODO remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme();
 const Dashboard = () => {
-    const [open, setOpen] = React.useState(true);
+    const [open, setOpen] = React.useState(false);
     const toggleDrawer = () => {
         setOpen(!open);
     };
@@ -226,9 +228,6 @@ const Dashboard = () => {
                     >
                         <div onClick={toggleDrawer}>
                             <img src={logo} style={{width: "109px", height: "32px", cursor: "pointer"}}/>
-                            {/*<IconButton>*/}
-                            {/*    <ChevronLeftIcon />*/}
-                            {/*</IconButton>*/}
                         </div>
                     </Toolbar>
                     <List component="nav">
@@ -248,9 +247,8 @@ const Dashboard = () => {
                     }}
                 >
                     <Toolbar />
-                    <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
+                    <Container maxWidth="xl" sx={{ mt: 4, mb: 4 }}>
                         <Grid container spacing={3}>
-                            {/* Chart */}
                             <Grid item xs={12} md={8} lg={9} sx={{background: "waveGreen"}}>
                                 <ThemeProvider theme={themeStyle}>
                                     <Paper
@@ -302,6 +300,24 @@ const Dashboard = () => {
                                         <Stack direction="row" justifyContent="space-between" p={{md:"20px", base: "15px"}}>
                                             <Text color="#343434" textAlign="center" fontFamily="Inter" fontSize="18px" fontStyle="normal" fontWeight="600" lineHeight="normal">Application</Text>
                                             <Text color="#00C796" textAlign="center" fontFamily="Inter" fontSize="14px" fontStyle="normal" fontWeight="700" lineHeight="normal">See more</Text>
+                                        </Stack>
+                                    </Stack>
+                                    <Stack direction={{md: "row", base: "column"}} spacing={6} p="20px">
+                                        <Stack backgroundColor="#DDFFF7" borderRadius="10px" width="220px" h="147px" p="10px">
+                                            <img src={recovery} style={{width: "31px", height: "31px"}}/>
+                                            <Text color="#384642" fontFamily="Inter" fontSize="24px" fontStyle="normal" fontWeight="700" lineHeight="normal">Recovery</Text>
+                                            <Stack direction="row" justifyContent="space-between" pt="20px">
+                                                <Text color="#343434" fontFamily="Inter" fontSize="12px" fontStyle="normal" fontWeight="500" lineHeight="normal">01/08/2023</Text>
+                                                <Text color="white" fontFamily="Inter" fontSize="10px" background="#135D54" borderRadius="8px" fontStyle="normal" fontWeight="500" p="4px" lineHeight="normal">Active</Text>
+                                            </Stack>
+                                        </Stack>
+                                        <Stack backgroundColor="#DDFFF7" borderRadius="10px" width="220px" h="147px" p="10px">
+                                            <img src={cloud} style={{width: "31px", height: "31px"}}/>
+                                            <Text color="#384642" fontFamily="Inter" fontSize="24px" fontStyle="normal" fontWeight="700" lineHeight="normal">Single Sign-on</Text>
+                                            <Stack direction="row" justifyContent="space-between" pt="20px">
+                                                <Text color="#343434" fontFamily="Inter" fontSize="12px" fontStyle="normal" fontWeight="500" lineHeight="normal">04/08/2023</Text>
+                                                <Text color="white" fontFamily="Inter" fontSize="10px" background="#135D54" borderRadius="8px" fontStyle="normal" fontWeight="500" p="4px" lineHeight="normal">Active</Text>
+                                            </Stack>
                                         </Stack>
                                     </Stack>
                                 </Paper>
